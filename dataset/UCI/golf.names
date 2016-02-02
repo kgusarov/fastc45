@@ -1,0 +1,6 @@
+the target attribute: class
+outlook: sunny, overcast, rain
+temperature: continuous
+humidity: continuous
+windy: true, false
+class:  Play, Don't Play

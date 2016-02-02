@@ -1,0 +1,8 @@
+#/bin/sh
+if [ "$1" = "" ];then
+    echo "Usage: cv <dataSetName> [fold]"
+    echo "Example: cv ../dataset/UCI/golf 10" 
+else
+    java -cp ../lib/c45.jar ml.classifier.CrossValidator $1 $2 $3 $4 $5
+fi
+

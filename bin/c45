@@ -1,0 +1,10 @@
+#/bin/sh
+if [ "$1" = "" ];then
+    echo "Usage: c45 <dataSetName>"
+    echo "Example: c45 ../dataset/UCI/golf"
+else
+    java -cp ../lib/c45.jar ml.classifier.dt.C45 $1 $2 $3 $4 $5
+fi
+
+
+

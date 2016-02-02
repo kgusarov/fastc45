@@ -1,0 +1,5 @@
+#!/bin/sh
+rm -rf dTree
+rm iris*.html
+rm iris.out
+rm iris*.xml

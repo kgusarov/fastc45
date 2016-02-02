@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+       <head>
+                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                 <title>UCI Data Set Format</title>
+                 <style type="text/css">
+                        body{
+							  background-color: white;
+							  margin-left: 18%;
+							  margin-right: 18%;
+							  border: 1px dotted gray;
+							  padding: 10px 10px 10px 10px;
+							  font family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+                        }
+                 </style>
+       </head>
+
+       <body>
+       <h2>The format of the .names file</h2>
+               <p>The format of the .names file is as follows:</p>
+               <p>
+				   For a discrete attribute, its attribute name should be first provided, then a colon followed with its all nominal values.<br>
+				   <b>For example:</b>    <i>outlook: sunny, overcast, rain</i>
+               </p>
+               <p>
+				    For a continuous attribute, its attribute name should also be first provided, then a colon followed with a string of <q>continuous</q>.<br>
+					<b> For example:</b>   <i>temperature: continuous</i>
+               </p>
+			   <p>
+				   To specify the target (or class) attribute, you can write <q>the target attribute: xxxx</q> at the top of the file.<br>
+					<b> For example:</b>   <i>the target attribute: outlook</i><br>
+			       If no target attribute is specified, the attribute with the name of <q>class</q> is taken as the target attribute by default.
+			   </p>
+			   <p>
+				   <b>A complete example</b>: golf.names<br>
+			   </p>
+			   <blockquote>
+			        <p>
+					the target attribute: class<br>
+					outlook: sunny, overcast, rain<br>
+					temperature: continuous<br>
+					humidity: continuous<br>
+					windy: true, false<br>
+					class:  Play, Don't Play<br>
+					</p>
+			   </blockquote>
+
+       <h2>The format of the .data file</h2>
+        <p>
+             The format of the .data file is the same as the UCI format, <i>i.e.</i> attribute values separated with commas.<br>
+             <b> For example:</b>   <i>sunny, 85, 85, false, Don't Play</i>
+        </p>
+        <p>
+			   <b>A complete example</b>: golf.data<br>
+	   </p>
+		<blockquote>
+		            <p>
+					sunny, 85, 85, false, Don't Play<br>
+					sunny, 80, 90, true, Don't Play<br>
+					overcast, 83, 78, false, Play<br>
+					rain, 70, 96, false, Play<br>
+					rain, 68, 80, false, Play<br>
+					</p>
+		</blockquote>
+
+
+	   <h2>The format of the .test file</h2>
+        <p>The format of the .test file is the same as the .data file.</p>
+
+         </body>
+</html>

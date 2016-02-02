@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+	     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <title>Usage of Bin Directory</title>
+			 <style type="text/css">
+			        body{
+						  background-color: white;
+						  margin-left: 18%;
+						  margin-right: 18%;
+						  border: 1px dotted gray;
+						  padding: 10px 10px 10px 10px;
+						  font family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+			        }
+			 </style>
+		</head>
+
+	<body>
+		<h2>Usage of c45</h2>
+		<p>
+			c45 is used to build decision trees for the specified data set. It prunes the decision tree and print it in the specified manner.
+		</p>
+		<p>
+		   <b>Usage: c45 &lt;dataSetName&gt; [-output plain|html  -repeat times] </b><br>
+		</p>
+		   <ol>
+		   <li>
+		   Option <q>-output</q> or <q>-o</q> specifies the output manner.
+		   <ul>
+			   <li><q>plain</q> output is adopted by default.</li>
+			   <li>html files produced by <q>html</q> output must be put together with the <q>dTree</q> directory unzipped from ../lib/dTree.zip.</li>
+		   </ul>
+		   </li>
+		   <li>
+		   Option <q>-repeat</q> or <q>-r</q> specifies the times of repetition to accurately measure the tree-building time.
+		   </li>
+		   </ol>
+		  <p><b>For example:</b>    <i>c45 ../dataset/UCI/golf</i></p>
+
+		<h2>Usage of cv</h2>
+		<p>cv is used to cross validate the classification performance of the c45 decision tree.</p>
+		<p>
+		   <b>Usage: cv &lt;dataSetName&gt; [fold]</b><br>
+		</p>
+		   <ol>
+		   <li> Option <q>fold</q> specifies the number of fold of the cross validation (10 by default).</li>
+		   </ol>
+		  <p> <b>For example:</b>    <i>cv ../dataset/UCI/golf</i></p>
+
+		<h2>Usage of create</h2>
+		<p>
+			create is used to create executable files in the ../work directory for the specified data set stored in ../dataset/UCI/ directory.
+	    </p>
+	    <p>
+			The functions of the created files are as follows
+			<ol>
+			<li>
+				"plainview" produces plain view of the decision tree.
+		   	</li>	
+			<li>
+				"htmlview" produces html view of the decision tree.
+		   	</li>
+		   	<li>
+				"xmlview" produces xml view of the decision tree.
+		   	</li>
+			<li>
+				"hibernate" performs object persistence from decision tree to xml file.
+	   		</li>
+			<li>
+				"spring" restores the object decision tree from xml file and output it in html view.
+	   		</li>
+	        <li>
+				"clean" removes all the produced files.
+	   		</li>
+			</ol>
+		</p>
+            The above created executable files provide an easier way to build decision trees, print decision trees in different ways, transforms decision tree to xml file and restore it from xml file.
+   		</p>
+   		<p>
+		<b>Usage: create &lt;dataSetName&gt; </b><br>
+		</p>
+		<p> <b>For example:</b>    <i>create golf</i></p>
+
+	</body>
+</html>

@@ -1,0 +1,5 @@
+#!/bin/sh
+rm -rf dTree
+rm golf*.html
+rm golf.out
+rm golf*.xml

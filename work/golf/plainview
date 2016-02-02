@@ -1,0 +1,2 @@
+#!/bin/sh
+java -jar ../../lib/c45.jar ../../dataset/UCI/golf -output plain > golf.out

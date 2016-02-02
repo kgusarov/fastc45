@@ -1,0 +1,6 @@
+#!/bin/sh
+currentPath=`pwd`
+cd ../../lib
+libPath=`pwd`
+cd $currentPath
+java -classpath $CLASSPATH:$libPath/xstream-1.3.1.jar:$libPath/c45.jar ml.demo.C45Hibernation "../../dataset/UCI/golf" >golf-hibernation.xml

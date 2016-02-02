@@ -1,0 +1,2 @@
+#!/bin/sh
+java -jar ../../lib/c45.jar ../../dataset/UCI/iris -output plain > iris.out

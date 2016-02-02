@@ -1,0 +1,3 @@
+#!/bin/sh
+jar xf ../../lib/dtree.zip
+java -jar ../../lib/c45.jar ../../dataset/UCI/golf -output html > golf.html

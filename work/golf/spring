@@ -1,0 +1,7 @@
+#!/bin/sh
+currentPath=`pwd`
+cd ../../lib
+libPath=`pwd`
+cd $currentPath
+jar xf ../../lib/dtree.zip
+java -classpath $CLASSPATH:$libPath/xstream-1.3.1.jar:$libPath/c45.jar ml.demo.C45Spring "golf-hibernation.xml" >golf-spring.html
